@@ -1,0 +1,68 @@
+﻿@page
+@model TheMiniShop.Pages.CartModel
+@{
+    ViewData["Title"] = "Your Cart";
+}
+
+<div class="container py-4">
+    <h2>Your Cart</h2>
+    @if (!Model.Items.Any())
+    {
+        <div class="alert alert-info">Your cart is empty. <a asp-page="/Index">Continue shopping</a></div>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th style="width:120px">Qty</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <img src="@item.ImageUrl" style="width:64px;height:48px;object-fit:cover;margin-right:10px" />
+                                <div>@item.Name</div>
+                            </div>
+                        </td>
+                        <td>R @item.Price</td>
+                        <td>
+                            <form method="post" asp-page-handler="Update">
+                                <input type="hidden" name="productId" value="@item.ProductId" />
+                                <input type="number" name="qty" value="@item.Quantity" min="0" class="form-control" style="width:90px" />
+                                <button class="btn btn-sm btn-secondary mt-1">Update</button>
+                            </form>
+                        </td>
+                        <td>R @item.Total</td>
+                        <td>
+                            <form method="post" asp-page-handler="Remove">
+                                <input type="hidden" name="productId" value="@item.ProductId" />
+                                <button class="btn btn-danger btn-sm">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <a asp-page="/Index" class="btn btn-outline-secondary">Continue shopping</a>
+            </div>
+            <div>
+                <strong>Total: R @Model.Items.Sum(i => i.Total)</strong>
+                <form method="post" asp-page-handler="Checkout" class="d-inline ms-3">
+                    <button class="btn btn-success">Proceed to Checkout</button>
+                </form>
+            </div>
+        </div>
+    }
+</div>
+

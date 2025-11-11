@@ -1,0 +1,33 @@
+﻿@page
+@model TheMiniShop.Pages.CheckoutModel
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<div class="container py-4">
+    <h2>Checkout</h2>
+
+    @if (!Model.Items.Any())
+    {
+        <div class="alert alert-info">Your cart is empty. <a asp-page="/Index">Shop now</a></div>
+    }
+    else
+    {
+        <div class="mb-3">
+            <strong>Order total:</strong> R @Model.Items.Sum(i => i.Total)
+        </div>
+
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">Full name</label>
+                <input asp-for="CustomerName" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input asp-for="CustomerEmail" class="form-control" type="email" required />
+            </div>
+            <button class="btn btn-success">Place order (simulate)</button>
+        </form>
+    }
+</div>
+

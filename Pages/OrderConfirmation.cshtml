@@ -1,0 +1,29 @@
+﻿@page
+@model TheMiniShop.Pages.OrderConfirmationModel
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<div class="container py-4">
+    @if (Model.Order == null)
+    {
+        <div class="alert alert-warning">No order found.</div>
+    }
+    else
+    {
+        <h2>Thank you, @Model.Order.CustomerName!</h2>
+        <p>Your order ID: <strong>@Model.Order.OrderId</strong></p>
+        <p>Placed: @Model.Order.CreatedAt.ToLocalTime()</p>
+
+        <h4>Items</h4>
+        <ul>
+            @foreach (var item in Model.Order.Items)
+            {
+                <li>@item.Quantity x @item.Name — R @item.Total</li>
+            }
+        </ul>
+
+        <p><strong>Total: R @Model.Order.TotalAmount</strong></p>
+        <a asp-page="/Index" class="btn btn-primary">Continue shopping</a>
+    }
+</div>

@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 1,
+    "Name": "Mint Vape Juice",
+    "Price": 250.00,
+    "Description": "Refreshing mint flavor vape juice."
+  },
+  {
+    "Id": 2,
+    "Name": "Hookah Hose",
+    "Price": 150.00,
+    "Description": "Durable silicone hose for all hookah types."
+  }
+]
+
+

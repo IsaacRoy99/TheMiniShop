@@ -1,0 +1,114 @@
+[
+  {
+    "Id": 1,
+    "Name": "Black Hoodie",
+    "Description": "Winter Hoodie.",
+    "Price": 650.00,
+    "ImageUrl": "/images/black-hoodie.png"
+  },
+  {
+    "Id": 2,
+    "Name": "Black T-Shirt",
+    "Description": "Summer Tee.",
+    "Price": 350.00,
+    "ImageUrl": "/images/black-tee.png"
+  },
+  {
+    "Id": 3,
+    "Name": "White T-shirt",
+    "Description": "Summer Tee.",
+    "Price": 350.00,
+    "ImageUrl": "/images/white-tee.png"
+  },
+  {
+    "Id": 4,
+    "Name": "White Hoodie",
+    "Description": "Winter Hoodie.",
+    "Price": 650.00,
+    "ImageUrl": "/images/white-hoodie.png"
+  },
+  {
+    "Id": 5,
+    "Name": "Coca-Cola",
+    "Description": "Refreshing drink.",
+    "Price": 20.00,
+    "ImageUrl": "/images/cocacola.png"
+  },
+  {
+    "Id": 6,
+    "Name": "Liqui-Fruit",
+    "Description": "Refreshing Juice.",
+    "Price": 20.00,
+    "ImageUrl": "/images/liquifruit.png"
+  },
+  {
+    "Id": 7,
+    "Name": "Simba Chips",
+    "Description": "Potato Chips.",
+    "Price": 20.00,
+    "ImageUrl": "/images/simba.png"
+  },
+  {
+    "Id": 8,
+    "Name": "Lays",
+    "Description": "Potato Chips.",
+    "Price": 20.00,
+    "ImageUrl": "/images/lays.png"
+  },
+  {
+    "Id": 9,
+    "Name": "Powerade",
+    "Description": "Refreshing Drink.",
+    "Price": 15.00,
+    "ImageUrl": "/images/powerade.jpg"
+  },
+  {
+    "Id": 10,
+    "Name": "Coconut Charcoal Cubes",
+    "Description": "Charcoal for your Shisha.",
+    "Price": 40.00,
+    "ImageUrl": "/images/coconut-charcoal-cubes.jpg"
+  },
+  {
+    "Id": 11,
+    "Name": "Hookah Mixed Color",
+    "Description": "2-pipe Hookah.",
+    "Price": 450.00,
+    "ImageUrl": "/images/hookah-mixed-color.png"
+  },
+  {
+    "Id": 12,
+    "Name": "Adalya Lady Killer",
+    "Description": "Hookah flavour.",
+    "Price": 40.00,
+    "ImageUrl": "/images/adalya-lady-killer.jpg"
+  },
+  {
+    "Id": 13,
+    "Name": "Hookah Inferno",
+    "Description": "2-pipe Hookah.",
+    "Price": 450.00,
+    "ImageUrl": "/images/hookah-inferno.png"
+  },
+  {
+    "Id": 14,
+    "Name": "Vape",
+    "Description": "Vape.",
+    "Price": 350.00,
+    "ImageUrl": "/images/vape1.jpg"
+  },
+  {
+    "Id": 15,
+    "Name": "Amaren Watermelon Mint",
+    "Description": "Hookah Flavour.",
+    "Price": 40.00,
+    "ImageUrl": "/images/amaren-watermelon-mint.jpg"
+  },
+  {
+    "Id": 16,
+    "Name": "Vape Juice Refill",
+    "Description": "Vape refill.",
+    "Price": 100.00,
+    "ImageUrl": "/images/grape-energy.jpg"
+  }
+]

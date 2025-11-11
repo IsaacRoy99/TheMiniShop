@@ -1,0 +1,31 @@
+﻿@page
+@model TheMiniShop.Pages.ProductModel
+@{
+    ViewData["Title"] = "Product Details";
+}
+<div class="container py-4">
+    @if (Model.Product == null)
+    {
+        <div class="alert alert-warning">Product not found.</div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <img src="@Model.Product.ImageUrl" class="img-fluid" style="max-height:400px;object-fit:cover" />
+            </div>
+            <div class="col-md-6">
+                <h2>@Model.Product.Name</h2>
+                <p class="small">@Model.Product.Description</p>
+                <p class="fw-bold">R @Model.Product.Price</p>
+                <form method="post" asp-page-handler="AddToCart" asp-route-id="@Model.Product.Id">
+                    <div class="mb-2">
+                        <label>Quantity</label>
+                        <input type="number" name="qty" value="1" min="1" class="form-control w-25" />
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    }
+</div>
